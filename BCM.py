@@ -20,7 +20,7 @@ DIAGNOSTIC_MSG = {"TPM_ID_0":"60 02 22 20 FF FF FF FF 5B",
                   }
      
 
-rfr = pyLIN.LIN('COM4',19200)
+radio_module = pyLIN.LIN('COM4',19200)
 
 def scheduleActiveMsg():         
     rfr.sendHeader(SLAVE_ADDRESS) 
@@ -43,7 +43,7 @@ while True:
         time_stamp = time.time()
         first_time= False
 
-rfr.close()
+radio_module.close()
 print "Done !! "
 
 
